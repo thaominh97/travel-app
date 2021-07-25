@@ -1,0 +1,53 @@
+@import url(../../../assets/fontawesome-free/css/all.css);
+.subscribe{
+    margin: 100px 119px 100px 94px;
+    background-image: url(../../../assets/img/background-sub.png);
+    box-sizing: border-box;
+    z-index: -1;
+}
+.sub-text{
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+    padding: 70px 50px 0 100px;
+    z-index: 1;
+}
+.send-icon{
+    width: 70px;
+    height: 70px;
+
+    position: absolute;
+    top: 3725px;
+    left: 1200px;
+}
+.input-sub {
+    border: 1px solid #39425D;
+    color: #39425D;
+    height: 68px;
+    width: 421px;
+    margin: 50px 20px;
+    padding-left: 20px;
+
+}
+.input-sub::before{
+    font-family: "Font Awesome 5 Free";
+    color: burlywood;
+    content: "\f0e0";
+}
+.button-sub {
+    background-image: linear-gradient(#FF946D,#FF7D68);
+    border-radius: 10px;
+    border: none;
+    height: 68px;
+    width: 180px;
+    margin: 0 20px;
+}
+.plus-img{
+    width: 153px;
+    height: 166px;
+
+    position: absolute;
+    top: 4050px;
+    left: 1201px;
+}
+

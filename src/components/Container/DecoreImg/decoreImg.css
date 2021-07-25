@@ -1,0 +1,13 @@
+.decore {
+    background-image: url(../../../assets/img/Decore.png);
+    background-size: cover;
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 650px;
+    height: 717px;
+    right: 0px;
+    top: 0;
+    z-index: -1;
+}
+

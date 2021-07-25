@@ -1,8 +1,68 @@
 .App {
   text-align: center;
 }
+.font-base {
+  font-family: "vollkorn";
+ }
+.font-vollkron-var {
+  font-family: "vollkornVar";
+}
+.font-ggsans-regular {
+  font-family: "GoogleSanRegular";
+}
+.font-volkhov-regular {
+  font-family: "volkhovRegular";
+}
+.font-volkhov-bold {
+  font-family: "volkhovBold";
+}
+.font-poppiuin-medium{
+  font-family: "poppinMedium";
+}
 
-.App-logo {
+h2 {
+  font-family: "volkhovBold";
+  color: #14183e;
+  font-size: 50px;
+  margin-top: 0;
+}
+h5{
+  font-family: "poppinMedium";
+  font-size: 44px;
+  font-weight: 500;
+  color: #181E4B;
+  margin: -10px 0 10px 0;
+
+}
+h6 {
+  color: #5e6282;
+  font-size: 18px;
+  font-family: "poppinMedium";
+  margin: 0;
+}
+p{
+  font-family: "poppinRegular";
+  font-size: 16px;
+  font-weight: 500;
+  color: #5E6282;
+  margin: 10px 0 ;
+}
+.p-style{
+  font-family: "poppinMedium";
+  color: #5E6282;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+
+}
+.p-style1{
+  font-family: "poppinMedium";
+  font-size: 21px;
+  font-weight: bold;
+  color: #080809;
+  margin-top: 16px;
+}
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +95,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/

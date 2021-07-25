@@ -1,0 +1,44 @@
+.logos{
+    margin: 100px 65px 10px 114px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+.logos-item {
+   
+    margin: 0 40px;
+}
+.item1 {
+    width: 130px;
+    height: 130px;
+}
+.item2 {
+    width: 172px;
+    height: 110px;
+}
+.item3 {
+    width: 162px;
+    height: 162px;
+   
+}
+.item4 {
+    width: 162px;
+    height: 32px;
+}
+.item5 {
+    width: 94px;
+    height: 31px;
+}
+
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 1200px) {
+}

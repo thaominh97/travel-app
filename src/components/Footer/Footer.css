@@ -1,0 +1,53 @@
+.footer{
+    margin: 100px 65px 0 100px;
+    
+    bottom: 0;
+    left: 0;
+}
+.footer-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.footer-items{
+    text-align: left;
+    margin: 0;
+}
+.list-items{
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+}
+.footer-items-app{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.button-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 5px;
+    height: 35px;
+    width: 90px;
+
+    border: none;
+    border-radius: 17px;
+    background-color: #080809;
+}
+.button-item > span{
+    text-align: left;
+    color: #FFFF;
+    font-size: 8px;
+    
+
+}
+.apple-icon,
+.google-play-icon {
+    height: 14px;
+    width: 14px;
+    margin-right: 5px;
+}

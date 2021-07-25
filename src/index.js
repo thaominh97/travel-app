@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/vollkorn/Vollkorn-Italic-VariableFont_wght.ttf'
+import './fonts/vollkorn/Vollkorn-VariableFont_wght.ttf'
+import './fonts/googleSans/OpenSans-Regular.ttf'
+import './fonts/volkhov/Volkhov-Regular.ttf'
+import './fonts/poppins/Poppins-Medium.ttf'
 
 ReactDOM.render(
   <React.StrictMode>

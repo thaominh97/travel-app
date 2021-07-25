@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "vollkorn";
+    src: local("vollkorn"), url("./volkhov/Volkhov-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "vollkornVar";
+    src: local("vollkornVar"), url("./vollkorn/Vollkorn-VariableFont_wght.ttf") format("truetype");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "volkhovRegular";
+    src: local("volkhovRegular"), url("./volkhov/Volkhov-Regular.ttf") format("truetype");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "poppinMedium";
+    src: local("poppinMedium"), url("./poppins/Poppins-Medium.ttf") format("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "poppinRegular";
+    src: local("poppinRegular"), url("./poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "volkhovBold";
+    src: local("volkhovBold"), url("./volkhov/Volkhov-Bold.ttf") format("truetype");
+    font-weight: 700;
+  }
+  
+  
+  @font-face {
+    font-family: "GoogleSanRegular";
+    src: local("GoogleSanRegular"), url("./googleSans/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 500;
+  }
