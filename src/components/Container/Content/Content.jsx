@@ -14,14 +14,14 @@ function Content() {
     return (
         <div className="content">
             <div className="content-left">
-                <p className="tagline font-poppin-medium">BEST DESTINATIONS AROUND THE WORLD</p>
+                <p className="tagline">BEST DESTINATIONS AROUND THE WORLD</p>
                 <h1 className="font-volkhov-bold">
-                    Travel, enjoy<br />
-                    and live a new<br />
+                    Travel, enjoy
+                    and live a new
                     and full life
                 </h1>
-                <p className="desc font-poppin-medium">
-                    Built Wicket longer admire do barton vanity itself do in it.<br/>
+                <p className="desc">
+                    Built Wicket longer admire do barton vanity itself do in it.
                     Preferred to sportsmen it engrossed listening.
                     Park gate sell they west hard for the.
                 </p>
@@ -31,7 +31,7 @@ function Content() {
                     <button className="button1 font-ggsans-regular" >Find out more</button>
                     <div className="play-demo">
                         <span className="play-circle"><FontAwesomeIcon icon="play-circle" /></span>
-                        <p className="play-demo_text font-poppin-medium">Play Demo</p>
+                        <p className="play-demo_text">Play Demo</p>
                     </div>
 
                 </div>

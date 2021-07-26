@@ -11,3 +11,14 @@
     z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+    .decore {
+       display: none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .decore {
+        height: 300px;
+        width: 200px;
+    }
+}

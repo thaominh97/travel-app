@@ -4,55 +4,121 @@
     margin: 150px 58px 10px 154px;
 }
 
-h2{
-    color: #14183E;
-    font-size: 50px;    
+h2 {
+    color: #14183e;
+    font-size: 50px;
 }
 h6 {
-    color: #5E6282;
+    color: #5e6282;
     font-size: 18px;
-    font-weight: 600;    
+    font-weight: 600;
 }
-.group4{
+.group4 {
     position: absolute;
     top: 966px;
     right: 58px;
 }
-.category-list{
+.category-list {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     width: 100%;
-
-   
 }
 
-.category-item{
+.category-item {
     margin: 20px 20px;
     justify-content: center;
     text-align: center;
-
-    
-
 }
-.category-item_plane{
+.category-item_plane {
     border-radius: 36px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding-bottom: 50px;
-
 }
-.pink-img{
+.pink-img {
     position: absolute;
     z-index: -1;
     top: 1310px;
     left: 410px;
 }
 .category-title {
-    color: #1E1D4C;
+    color: #1e1d4c;
     font-weight: bold;
     font-size: 20px;
 }
 .describe {
-    color: #5E6282;
+    color: #5e6282;
     font-size: 16px;
+    
+}
+
+/*Responsive media query*/
+@media screen and (max-width: 480px) {
+    .category {
+        margin: 50px 0 5px 40px;
+        text-align: left;
+    }
+    h2 {
+        display: block;
+        font-size: 26px;
+        width: 90%;
+        word-wrap: break-word;
+    }
+    .category-list {
+        flex-direction: column;    
+    }
+    .category-item{
+        justify-content: flex-start;
+        text-align: left;
+        margin: 10px 5px;
+    }
+    .pink-img,
+    .group4 {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .category {
+        margin: 50px 0 5px 40px;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 30px;
+        width: 90%;
+    }
+    .category-list {
+        flex-direction: column;    
+    }
+    .category-item{
+        justify-content: flex-start;
+        text-align: left;
+        margin: 10px 5px;
+    }
+    .pink-img,
+    .group4 {
+        display: none;
+    }
+}
+@media screen and (max-width: 999px) and (min-width: 769px) {
+    h2 {
+        font-size: 36px;
+    }
+    .pink-img,
+    .group4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+    .category {
+        margin-top: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .pink-img,
+    .group4 {
+        display: none;
+    }
 }

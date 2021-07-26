@@ -1,43 +1,47 @@
 .content {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     box-sizing: border-box;
     flex: 1;
     padding-bottom: 100px;
 }
 
-.content-left{
+.content-left {
     display: flex;
-    flex-direction: column; 
-    text-align: left;   
-    
+    flex-direction: column;
+    text-align: left;
+
     margin: 30px 0px 0 100px;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
-h1{
-    color: #181E4B;
+h1 {
+    color: #181e4b;
     font-size: 84px;
 
     margin: 0;
+    width: 600px;
+    letter-spacing: -4%;
 }
-.tagline{
+.tagline {
     font-weight: bold;
-    color: #DF6951;
-
+    color: #df6951;
 }
-.desc{
-    color: #5E6282;
+.desc {
+    color: #5e6282;
     line-height: 30px;
     font-size: 17px;
+    text-align: justify;
     width: 400px;
 }
-.button-icon{
+.button-icon {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    align-items: center;
+    text-align: center;
 }
-.button1{
-    background-color: #F1A501;
+.button1 {
+    background-color: #f1a501;
     border-radius: 10px;
     border: none;
 
@@ -46,28 +50,28 @@ h1{
 
     height: 55px;
     width: 160px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     padding: 7px 13px;
 }
-.play-demo{
+.play-demo {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-left: 40px;
 }
 .play-demo_text {
-    color: #686D77;
+    color: #686d77;
     font-size: 17px;
     margin-left: 20px;
 }
 .play-circle {
     font-size: 45px;
-    color: #DF6951;
-    margin-top: 4px;
+    color: #df6951;
 }
 
-.content-img{
-    flex : 0;
+.content-img {
+    flex: 0;
 }
 .line-decore {
     height: 12px;
@@ -76,7 +80,7 @@ h1{
     left: 393px;
     top: 250px;
 
-    position: absolute ;
+    position: absolute;
     z-index: -1;
 }
 .plane1 {
@@ -84,10 +88,10 @@ h1{
     width: 100px;
 
     z-index: 1;
-    position: absolute ;
-   
-    right: 500px;
-    top: 190px;
+    position: absolute;
+
+    right: 400px;
+    top: 160px;
     border-radius: 0px;
 }
 .plane2 {
@@ -101,13 +105,114 @@ h1{
     top: 250px;
     rotate: 31deg;
     border-radius: 0px;
-
 }
 .traveller {
-    height: 765px;
-    width: 764px;
+    height: 665px;
+    width: 664px;
 
     position: absolute;
     right: 0px;
-    top :105px;
+    top: 105px;
+}
+
+@media screen and (max-width: 480px) {
+    .content {
+        align-items: center;
+        padding: 0;
+    }
+    .content-left{
+        margin: 20px 0 5px 40px;
+    }
+    h1 {
+        display: block;
+        font-size: 36px;
+        width: 90%;
+        word-wrap: break-word;
+    }
+    .desc,
+    .tagline {
+        width: 90%;
+       
+    }
+    .button-icon {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .play-demo {
+        margin: 0;
+    }
+    .desc, 
+    .tagline,
+    .play-demo_text, 
+    .button1 {
+        font-size: 15px;
+    }
+
+    .content-img {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .content {
+        align-items: center;
+        padding: 0;
+    }
+    .content-left{
+        margin: 20px 5px 5px 40px;
+    }
+    .content-img {
+        display: none;
+    }
+    h1 {
+        font-size: 46px;
+        width: 90%;
+    }
+    .button-icon {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .play-demo {
+        margin: 0;
+    }
+    .desc, 
+    .play-demo_text, 
+    .button1 {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 999px) and (min-width: 769px) {
+    .content-img {
+        display: none;
+    }
+    h1 {
+        font-size: 56px;
+    }
+    .desc, 
+    .play-demo_text, 
+    .button1 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+    .line-decore {
+        top: 225px;
+        left: 200px;
+    }
+    .traveller {
+        height: 465px;
+        width: 464px;
+    }
+    .plane1,
+    .plane2 {
+        display: none;
+    }
+    h1 {
+        font-size: 64px;
+    }
+    .desc, 
+    .play-demo_text, 
+    .button1 {
+        font-size: 15px;
+    }
 }

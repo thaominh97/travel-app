@@ -17,7 +17,7 @@ function Container() {
             <Content/>
             <Category/>
             <Destinations/> 
-            <BookTrip/> 
+            <BookTrip/>
             <TesSections/>    
             <Logos/> 
             <Subscribe/>               
