@@ -52,13 +52,20 @@ p{
   font-family: "poppinMedium";
   color: #5E6282;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
   margin-top: 16px;
 
 }
 .p-style1{
   font-family: "poppinMedium";
   font-size: 21px;
+  font-weight: bold;
+  color: #080809;
+  margin-top: 16px;
+}
+.p-style2{
+  font-family: "poppinMedium";
+  font-size: 18px;
   font-weight: bold;
   color: #080809;
   margin-top: 16px;

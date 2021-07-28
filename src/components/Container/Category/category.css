@@ -7,6 +7,7 @@
 h2 {
     color: #14183e;
     font-size: 50px;
+    margin: 0;
 }
 h6 {
     color: #5e6282;
@@ -93,7 +94,10 @@ h6 {
     .category-item{
         justify-content: flex-start;
         text-align: left;
-        margin: 10px 5px;
+        margin: 20px 5px 0 0;
+    }
+    .category-item_plane{
+        padding-bottom: 0;
     }
     .pink-img,
     .group4 {
@@ -112,7 +116,7 @@ h6 {
 
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
     .category {
-        margin-top: 50px;
+        margin-top: 10px;
     }
     h2 {
         font-size: 40px;

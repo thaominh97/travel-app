@@ -32,6 +32,7 @@ h2 {
     color: #14183e;
     font-size: 50px;
     margin: 0;
+    word-break: break-word;
 }
 h6 {
     color: #5e6282;
@@ -46,7 +47,7 @@ h6 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 48px;
+    margin-top: 30px;
 
 }
 .describe-list {
@@ -67,20 +68,49 @@ h6 {
     text-align: left;
     z-index: 1;
 }
-.trip3-describe2{
-    width: 263px;
-    height: 193px;
-    position: absolute;
-    top: 2540px;
-    right: 100px;
-    background-color: #FFFFFF;
-    border-radius: 40px;
-    line-height: 16px;
-
+.trip3-describe1-infor1{
     display: flex;
     flex-direction: row;
-    align-items: flex-start ;
+    align-items: baseline;
+}
+.trip3-describe1-infor2{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 20px 30px 0 0 ;
+    height: 19px;
+}
+.line {
+    background-color: #5E6282;
+    width: 1px;
+    height: 16px;
+    margin: 0 10px;
+}
+.trip3-describe1-icon{
+    margin-right: 20px;
+    height: 36px;
+}
+.trip4{
+    grid-row: 2 / span 2; 
+
+    width: 263px;
+    height: 120px;
+    
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    line-height: 16px;  
     text-align: left;
+    display: flex;
+    align-items: flex-start;
+
+    z-index: 2;
+    margin-top: -160px;
+    margin-left: 210px;
+}
+.trip3-img-heart{
+    margin-left: 120px;
+
 }
 .background{
     background-color: rgba(89, 177, 230, 1);
@@ -96,4 +126,123 @@ h6 {
     right: 170px;
     z-index: -1;
 
+}
+/* Responsive for Book a trip*/
+@media screen and (max-width: 480px) {
+    .trip{
+        text-align: left;
+        margin: 50px 0 5px 40px;
+    }
+    .trip1{
+        height: 100%;
+    }
+    .trip3 {
+        grid-row: 3 / span 1;
+        padding: 0;
+        margin-left: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .trip2 {
+        width: 100%;
+    }
+    .trip2-list_item {
+        margin-top: 20px;
+    }
+    .symbol-list {
+        margin-right: 10px;
+    }
+    
+    .trip3-img {
+        width: 90%;
+    }
+    .trip3-img-heart{
+        margin-left: 30px;
+    }
+    h2 {
+        display: block;
+        font-size: 26px;
+        word-wrap: break-word;
+    }
+    .background {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .trip{
+        text-align: left;
+        margin: 50px 0 5px 40px;
+    }
+    .trip1{
+        height: 90%;
+    }
+    .trip3 {
+        grid-row: 3 / span 1;
+        padding: 0;
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 80%;
+    }
+    .trip2 {
+        width: 90%;
+    }
+    
+    .trip2-list_item {
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 30px;
+        width: 90%;
+    }
+    
+    .background {
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 999px) and (min-width: 769px) {
+    .trip{
+        text-align: left;
+        margin: 50px 0 5px 40px;
+    }
+    .trip1{
+        height: 90%;
+    }
+    .trip3 {     
+        margin-left: 10px;  
+    }
+    .trip2 {
+        width: 90%;
+    }
+    .trip2-list_item {
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+   
+    .background {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 1000px) {
+    .trip{
+        margin-top: 50px;
+    }
+    .trip1{
+        height: 90%;
+    }
+    .trip3 {     
+        margin-left: 30px;
+        
+    }
+    .background{
+        right: 0;
+        top: 2400px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    
 }

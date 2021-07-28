@@ -51,3 +51,35 @@
     left: 1201px;
 }
 
+@media screen and (max-width: 480px) {
+    
+    h2 {
+        display: block;
+        font-size: 26px;
+        width: 90%;
+        word-wrap: break-word;
+    }
+    
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    h2 {
+        font-size: 30px;
+        width: 90%;
+    }
+    
+    
+}
+@media screen and (max-width: 999px) and (min-width: 769px) {
+    h2 {
+        font-size: 36px;
+    }
+   
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+}

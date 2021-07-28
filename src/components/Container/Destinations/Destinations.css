@@ -1,6 +1,7 @@
 .destinations {
-    margin: 100px 65px 100px 150px;
+    margin: 100px 65px 100px 100px;
     box-sizing: border-box;
+  
 }
 
 .des-decore{
@@ -10,8 +11,8 @@
     position: absolute;
     z-index: -1;
 
-    right: 30px;
-    top: 1850px;
+    right: 100px;
+    top: 1820px;
 }
 .destinations-list {
     display: flex;
@@ -67,4 +68,102 @@
     margin-right: 15px; 
     height: 20px;
 
+}
+
+@media screen and (max-width: 480px) {
+    .destinations {
+        text-align: left;
+        margin: 50px 0 5px 40px;
+
+
+    }
+    .destinations-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 60%;
+        margin-left: -80px;
+
+    }
+    .destinations-item {
+        margin: 20px 20px 0 10px;
+        width: 60%;
+    }
+    h2 {
+        display: block;
+        font-size: 26px;
+        width: 90%;
+        word-wrap: break-word;
+    }
+    .des-decore{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    .destinations {
+        text-align: left;
+        margin: 50px 0 5px 40px;
+
+    }
+    .destinations-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 60%;
+        margin-left: -80px;
+
+    }
+    .destinations-item {
+        margin: 20px 20px 0 10px;
+    }
+    h2 {
+        font-size: 30px;
+        width: 90%;
+    }
+    .des-decore{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 999px) and (min-width: 769px) {
+    .destinations {
+        text-align: left;
+        margin: 50px 0 5px 40px;
+
+    }
+    .destinations-list {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        width: 100%;
+        margin-left: -80px;
+
+    }
+    .destinations-item {
+        margin: 20px 20px 0 10px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+    .des-decore{
+        display: none;
+    }
+   
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+    .destinations{
+        margin-top: 10px ;
+    }
+    .destinations-list{
+        flex-wrap: wrap;
+        
+    }
+    .destinations-item{
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .des-decore{
+        display: none;
+    }
 }
