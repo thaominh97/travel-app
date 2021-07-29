@@ -1,19 +1,20 @@
 .footer{
-    margin: 100px 65px 0 100px;
-    
-    bottom: 0;
-    
-    
+    margin: 50px 65px 0 100px;   
+    bottom: 0;    
 }
 .footer-main{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
 }
 .footer-items{
     text-align: left;
     margin: 0;
+}
+.main-item{
+    order: -1;
 }
 .list-items{
     list-style-type: none;

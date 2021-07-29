@@ -1,5 +1,5 @@
 .logos{
-    margin: 100px 65px 10px 114px;
+    margin: 80px 65px 10px 114px;
 
     display: flex;
     flex-direction: row;
@@ -30,11 +30,23 @@
     height: 32px;
 }
 .item5 {
-    width: 94px;
+    width: 100px;
     height: 31px;
 }
 
 @media screen and (max-width: 480px) {
+    .logos
+    {
+        margin: 20px 0 5px 40px;
+        
+    }
+    .logos-item{
+        margin: 0 10px;
+    }
+    .item5{
+    margin-top: 30px;
+    padding: 30px;
+    }
 }
 @media screen and (max-width: 768px) {
 }

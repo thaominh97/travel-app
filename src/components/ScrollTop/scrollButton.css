@@ -2,7 +2,7 @@
     display: block;
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 10vw;
     z-index: 99;
     
     border: none;

@@ -26,16 +26,17 @@
     
 }
 .tes-right{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    
     margin-left: 50px;
     height: 230px;
     
 }
 .infor-staff{
+    grid-row: 1 \ span 1;
     background-color: #ffff;
   
-    height: 279px;
+    height: 250px;
 
     display: flex;
     flex-direction: row;
@@ -55,44 +56,79 @@
 
 }
 .infor-manager{
-    text-align: justify;
+    grid-row: 2 \ span 1;
 
     background-color: #F7F7F7;
     border-radius: 10px;
+    text-align: justify;
 
-    position: absolute;
-    top: 3190px;
-    left: 740px;
     width: 450px;
     height: 200px;
 
     z-index: -1;
+    margin-top: -100px;
+    margin-left: 100px;
 }
+.pagination-button {
+    background:#ffff;
+    border: none;
+    color: #BCB7C2 ;
+}
+.pagination-button:hover{
+    cursor: pointer;
+    color: #181E4B;
 
+}
 .angle-up, 
 .angle-down {
     margin: 30px 0;
-    color: #3E2E4D;
     font-size: 25px;
     font-weight: 500;
 }
-.angle-up:hover, 
-.angle-down:hover {
-    cursor: pointer;
-    color: #BCB7C2;
-}
 
+/*Responsive*/
 @media screen and (max-width: 480px) {
-    
+    .tes-sections {
+        flex-direction: column;
+        margin: 80px 0 5px 40px;
+        justify-content: left;
+
+    }
+    .tes-right{
+        margin: 30px 0 40px 0;
+    }
+    .infor-person{
+        width: 50%;
+    }
+    .pagination{
+        transform:rotate(90deg);
+        margin-left: 250px;        
+    }
     h2 {
         display: block;
         font-size: 26px;
-        width: 90%;
+        
         word-wrap: break-word;
     }
     
 }
 @media screen and (max-width: 768px) and (min-width: 481px) {
+    .tes-sections {
+        flex-direction: column;
+        margin: 100px 0 5px 40px;
+        justify-content: left;
+
+    }
+    .tes-right{
+        margin: 30px 0 40px 0;
+    }
+    .infor-person{
+        width: 80%;
+    }
+    .pagination{
+        transform:rotate(90deg);
+        margin-left: 250px;        
+    }
     h2 {
         font-size: 30px;
         width: 90%;

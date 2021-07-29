@@ -11,7 +11,7 @@ function Footer() {
     return (
         <div className="footer">
             <div className="footer-main">
-                <div className="footer-items">
+                <div className="footer-items main-item">
                     <h5>Jadoo.</h5>
                     <p style={{fontSize:"13px"}}>Book your trip in minute, get full<br/>
                         Control for much longer.
