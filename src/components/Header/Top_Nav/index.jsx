@@ -1,4 +1,5 @@
 import React, { memo } from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
@@ -12,11 +13,11 @@ library.add(fas, faAngleDown);
 
 function Navigation() {
     const navList = [
-        { id: 1, title: 'Destination', href: "#Destination" },
-        { id: 2, title: 'Hotels', href: "#Hotels" },
-        { id: 3, title: 'Flights', href: "#Flights" },
-        { id: 4, title: 'Bookings', href: "#Bookings" },
-        { id: 5, title: 'Login', href: "#Login" },
+        { id: 1, title: 'Destination', href: "#Destination", to: "/destination" },
+        { id: 2, title: 'Hotels', href: "#Hotels", to: "/hotels" },
+        { id: 3, title: 'Flights', href: "#Flights", to: "/flights" },
+        { id: 4, title: 'Bookings', href: "#Bookings", to: "/bookings" },
+        { id: 5, title: 'Login', href: "#Login", to: "/login"},
     ]
 
     
@@ -25,13 +26,13 @@ function Navigation() {
 
         <div className="topnav" id="TopNav">
 
-            <img src={Logo} className="logo" alt="Logo"></img>
+            <Link to="/home" className="logo"><img src={Logo} alt="Logo"/></Link>
 
             <ul className="nav-list">
                 {navList.map((item) =>
                 (<li key={item.id} className="nav-item font-ggsans-regular"
                 >
-                    <a href={item.href}>{item.title}</a>
+                    <Link to={item.to} href={item.href}>{item.title}</Link>
                 </li>)
                 )}
 
