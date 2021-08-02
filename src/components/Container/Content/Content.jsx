@@ -38,9 +38,10 @@ function Content() {
             </div>
             <div className="content-img">
                 <img src={LineDecore} className="line-decore" alt="line-decore"/>
-                <img src={Plane1} className="plane1" alt="plane" />
 
                 <img src={Traveller} className="traveller" alt="traveller" />
+
+                <img src={Plane1} className="plane1" alt="plane" />
 
                 <img src={Plane2} className="plane2" alt="plane" />
             </div>

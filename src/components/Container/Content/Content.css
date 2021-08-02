@@ -86,8 +86,6 @@ h1 {
 .plane1 {
     height: 120px;
     width: 100px;
-
-    z-index: 1;
     position: absolute;
 
     right: 400px;
@@ -95,12 +93,10 @@ h1 {
     border-radius: 0px;
 }
 .plane2 {
-    height: 80px;
-    width: 100px;
+    height: 70px;
+    width: 80px;
 
     position: absolute;
-    z-index: 2;
-
     right: 10px;
     top: 250px;
     rotate: 31deg;

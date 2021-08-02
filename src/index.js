@@ -8,11 +8,13 @@ import './fonts/vollkorn/Vollkorn-VariableFont_wght.ttf'
 import './fonts/googleSans/OpenSans-Regular.ttf'
 import './fonts/volkhov/Volkhov-Regular.ttf'
 import './fonts/poppins/Poppins-Medium.ttf'
+import store from './store'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
