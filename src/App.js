@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import  React, { useEffect } from "react"
 import { hideModal } from './store/redux/modalReducer'
 
+
 const customStyles = {
   content: {
     top: '50%',

@@ -5,17 +5,17 @@
     background-size: 100% 100%;
     background-size: cover;
     border-radius: 5px;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
 }
 .login-data {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
     margin-top: auto;
    
 }
@@ -31,11 +31,12 @@
     color: #d8ebf0;
 }
 .login .login__form {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 2.5rem;
+    color: #ffff;
 }
 .email,
 .password {
@@ -45,7 +46,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #6ca6b4;
-    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
 
     color: rgb(214, 233, 241);
     font-size: 1.3rem;
@@ -60,7 +61,7 @@
     outline: none;
 }
 .login-btn {
-    width: 50%;
+    width: 100%;
     height: 3rem;
     color: rgb(61, 66, 68);
     background-color: #6ca6b4;
@@ -68,6 +69,7 @@
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
+    margin-top: 3.5rem;
 }
 .login-btn:hover {
     background-color: #aacef1;
