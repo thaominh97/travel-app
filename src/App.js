@@ -2,15 +2,14 @@ import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import RouterNav from './components/Header/viewsHeader/RouterNav';
 import Header from './components/Header';
-import Container from './components/Container/Container';
 import Footer from './components/Footer/Footer';
 import ScrollButton from './components/ScrollTop/ScrollButton';
 import { LoginScreen } from './components/Header/viewsHeader/Login/Login';
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from 'react-redux';
-import  React, { useEffect } from "react"
+import React, { useEffect } from "react"
 import { hideModal } from './store/redux/modalReducer'
-
+import LoginAPI from './components/Header/Logic/LoginAPI';
 
 const customStyles = {
   content: {
@@ -33,7 +32,7 @@ function App() {
   const dispatch = useDispatch();
 
   // useSelector get state of current modal
-  const modal = useSelector((state)=> state.modal)
+  const modal = useSelector((state) => state.modal)
 
   useEffect(() => {
     setIsOpen(modal)
@@ -58,12 +57,26 @@ function App() {
     setIsOpen(false);
   }
 
+  const onSubmit = (infor) => {
+    console.log(infor)
+    const raw = {
+      "user_id": infor.email,
+      "password": infor.password,
+      "type": "buyer"
+    };
+    
+
+    LoginAPI(raw, (result) => {
+      console.log({ result })
+    })
+  }
+
   return (
     <div className="App">
       <Router>
         <Header />
         <RouterNav />
-        <Container />
+        {/* <Container /> */}
         <ScrollButton />
         <Footer />
       </Router>
@@ -76,7 +89,7 @@ function App() {
         contentLabel="Modal"
       >
         {/* form login */}
-          <LoginScreen />
+        <LoginScreen onSubmit={onSubmit} />
       </Modal>
     </div>
   );

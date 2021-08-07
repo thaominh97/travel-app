@@ -17,7 +17,7 @@ const loginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Required")
 });
 
-const Login = () => {
+const Login = ({onSubmit}) => {
     const dispatch = useDispatch();
     return (
         <div className="login">
@@ -31,10 +31,11 @@ const Login = () => {
                 initialValues={{ email: "", password: "" }}
                 validationSchema={loginSchema}
                 onSubmit={(values, { setSubmitting }) => {
-                    setTimeout(() => {
-                        console.log("Logging in", values);
-                        setSubmitting(false);
-                    }, 500);
+                    // setTimeout(() => {
+                    //  console.log("Logging in", values);
+                    //     setSubmitting(false);
+                    // }, 500);
+                    onSubmit(values)
                 }}
             >
                 {({ isSubmitting }) => {
