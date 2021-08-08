@@ -1,7 +1,7 @@
 .login {
     width: 400px;
     height: 450px;
-    background-image: url(../../../../assets/img/forest-img.jpg);
+    background-image: url(../../assets/img/forest-img.jpg);
     background-size: 100% 100%;
     background-size: cover;
     border-radius: 5px;
@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    
 }
 .login-data {
     display: flex;
@@ -23,8 +24,8 @@
 .fa-window-close {
     font-size: 25px;
     position: absolute;  
-    top: 0;
-    right: 0;
+    top: 10px;
+    left: 10px;
     cursor: pointer;
 }
 .fa-window-close:hover {

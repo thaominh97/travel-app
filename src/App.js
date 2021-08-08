@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import RouterNav from './components/Header/viewsHeader/RouterNav';
+import RouterNav from './Views/RouterNav';
 import Header from './components/Header';
 import Footer from './components/Footer/Footer';
 import ScrollButton from './components/ScrollTop/ScrollButton';
-import { LoginScreen } from './components/Header/viewsHeader/Login/Login';
+import { LoginScreen } from './Views/Login/Login';
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from "react"

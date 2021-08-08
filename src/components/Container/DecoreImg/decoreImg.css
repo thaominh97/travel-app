@@ -4,14 +4,14 @@
     box-sizing: border-box;
 
     position: absolute;
-    width: 650px;
-    height: 717px;
+    width: 40vw;
+    height: 100vh;
     right: 0px;
     top: 0;
     z-index: -1;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .decore {
        display: none;
     }
@@ -21,4 +21,4 @@
         height: 300px;
         width: 200px;
     }
-}
+} */

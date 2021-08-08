@@ -1,10 +1,9 @@
 import React from 'react'
 import './Footer.css'
-import Facebook from '../../assets/img/Social1.png'
-import Instagram from '../../assets/img/Social2.png'
-import Twitter from '../../assets/img/Social3.png'
+import '../../assets/fontawesome-free/js/all'
 import Apple from '../../assets/img/apple.png'
 import GooglePlay from '../../assets/img/google-play.png'
+
 
 function Footer() {
 
@@ -13,7 +12,7 @@ function Footer() {
             <div className="footer-main">
                 <div className="footer-items main-item">
                     <h5>Jadoo.</h5>
-                    <p style={{fontSize:"13px"}}>Book your trip in minute, get full<br/>
+                    <p style={{ fontSize: "13px" }}>Book your trip in minute, get full<br />
                         Control for much longer.
                     </p>
                 </div>
@@ -42,24 +41,24 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="footer-items p-style">
-                    <div>
-                        <img src={Facebook} alt="Facebook icon" />
-                        <img src={Instagram} alt="Instagram icon" />
-                        <img src={Twitter} alt="Twitter icon" />
+                    <div className="socical-media">
+                        <i className="fab fa-facebook-square socical-media-icon" />
+                        <i className="fab fa-instagram-square socical-media-icon " />
+                        <i className="fab fa-twitter-square socical-media-icon " />
                     </div>
-                    <p style={{fontSize:"20px"}}>Discover our app</p>
+                    <p style={{ fontSize: "20px" }}>Discover our app</p>
                     <div className="footer-items-app">
                         <button className="button-item">
                             <img src={GooglePlay} alt="google-play icon" className="google-play-icon" />
                             <span>
-                                GET IT ON<br/>
+                                GET IT ON<br />
                                 Google Play
                             </span>
                         </button>
                         <button className="button-item">
-                            <img src={Apple} alt="apple icon" className="apple-icon"/>
+                            <img src={Apple} alt="apple icon" className="apple-icon" />
                             <span>
-                                Avalible on the<br/>
+                                Avalible on the<br />
                                 Apple Store
                             </span>
                         </button>
@@ -69,7 +68,7 @@ function Footer() {
                 </div>
             </div>
 
-            <p style={{fontSize:"14px", marginTop:"50px"}} >All rights reserved@jadoo.co</p>
+            <p style={{ fontSize: "14px", marginTop: "40px", paddingBottom: "20px" }} >All rights reserved@jadoo.co</p>
 
         </div>
     )

@@ -1,6 +1,9 @@
 .footer{
-    margin: 50px 65px 0 100px;   
-    bottom: 0;    
+    position: absolute; 
+    width: 100%;
+    height: 1rem;
+    bottom: 0;
+    
 }
 .footer-main{
     display: flex;
@@ -8,10 +11,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0 60px;
 }
 .footer-items{
     text-align: left;
-    margin: 0;
+    margin-top: 20px;
 }
 .main-item{
     order: -1;
@@ -32,7 +36,7 @@
     flex-direction: row;
     align-items: center;
 
-    margin: 5px;
+    margin-right: 10px;
     height: 35px;
     width: 90px;
 
@@ -44,12 +48,31 @@
     text-align: left;
     color: #FFFF;
     font-size: 8px;
-    
-
+    margin: 0;
+}
+.socical-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 70px;
+}
+.socical-media-icon {
+    height: 100%;
+    margin-right: 20px;
+    font-size: 45px;
 }
 .apple-icon,
 .google-play-icon {
     height: 14px;
     width: 14px;
-    margin-right: 5px;
+    margin-right: 7px;
+}
+
+@media screen and (max-width: 770px) {
+    .list-items {
+        font-size: 15px;
+    }
+    .footer-items > p {
+        font-size: 17px;
+    }
 }

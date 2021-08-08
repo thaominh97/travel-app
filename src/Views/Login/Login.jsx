@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
 import { useDispatch } from 'react-redux'
-import { hideModal } from '../../../../store/redux/modalReducer'
+import { hideModal } from '../../store/redux/modalReducer'
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
-import './login.css'
+import '../Login/login.css'
 
 library.add(fas);
 

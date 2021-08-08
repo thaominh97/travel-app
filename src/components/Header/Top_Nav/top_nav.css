@@ -1,3 +1,5 @@
+@import url(../Navbar/Navbar.css);
+
 .topnav {
     display: flex;
     flex-direction: row;
@@ -5,7 +7,7 @@
     align-items: center;
     box-sizing: content-box;
 
-    margin: 40px 58px 10px 100px;
+    padding: 40px 58px 10px 100px;
 }
 
 .logo {
@@ -67,9 +69,8 @@
 
 .menu-burger {
     display: none;
-    color: #212832;
-    margin: 0 20px;
-    font-size: 20px;
+    z-index: 99;
+    overflow: hidden;   
 }
 
 .nav-item__button,
@@ -80,9 +81,10 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
     .topnav {
-        margin: 40px 50px 10px 40px;
+        padding-left: 60px;
+        align-items: flex-start;
     }
     .nav-list {
         display: none;
@@ -91,18 +93,6 @@
         display: block;
     }
 }
-@media screen and (max-width: 1059px) and (min-width: 769px){
-    .topnav {
-        margin: 40px 50px 10px 100px;
-    }
-    .nav-list {
-        display: none;
-    }
-    .menu-burger {
-        display: block;
-    }
-}
-
 @media screen and (max-width: 1060px) {
     .topnav {
         height: 30px;

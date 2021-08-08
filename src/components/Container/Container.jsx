@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import './Container.css'
-import DecoreIMG from './DecoreImg/decoreImg'
 import Content from './Content/Content'
 import Category from './Category/Category'
 import Destinations from './Destinations/Destinations'
@@ -13,7 +12,6 @@ import Subscribe from './Subscribe/Subscribe'
 function Container() {
     return (
         <div className="container">
-            <DecoreIMG/>
             <Content/>
             <Category/>
             <Destinations/> 
