@@ -14,7 +14,7 @@
     margin: 30px 0px 0 100px;
     box-sizing: border-box;
 }
-h1 {
+.content-left > h1 {
     color: #181e4b;
     font-size: 84px;
 

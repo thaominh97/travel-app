@@ -1,0 +1,15 @@
+.booking {
+    margin: 40px 60px;
+
+}
+.booking__infor {
+    display: block;
+    columns: 3;
+}
+.infor__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    margin-bottom: 30px;
+}

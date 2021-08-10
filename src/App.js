@@ -60,9 +60,9 @@ function App() {
   const onSubmit = (infor) => {
     console.log(infor)
     const raw = {
-      "user_id": infor.email,
+      "email": infor.email,
       "password": infor.password,
-      "type": "buyer"
+     
     };
     
 

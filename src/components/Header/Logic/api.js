@@ -1,5 +1,7 @@
-export const API = 'https://api-develop.oda.vn/web/api/v1'
+export const API = 'https://reqres.in/api'
 export const Api_config = {
     login : '/login',
+    user : '/users',
+    resource : '/unknown'
 
 }

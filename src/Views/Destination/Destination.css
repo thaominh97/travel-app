@@ -1,0 +1,19 @@
+.destination {
+    margin: 40px 60px;
+
+}
+.destination__infor {
+    display: block;
+    columns: 3;
+}
+.destination__infor-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.destination__infor-detail > p {
+    line-height: 25px;
+    margin: 0;
+}
