@@ -57,17 +57,22 @@ function App() {
     setIsOpen(false);
   }
 
+  const handleFormSubmit = (token) => {
+    localStorage.setItem('token', token )
+    
+}
+
   const onSubmit = (infor) => {
     console.log(infor)
     const raw = {
-      "email": infor.email,
-      "password": infor.password,
-     
+      "email": "eve.holt@reqres.in",
+      "password": "cityslicka"
     };
-    
 
     LoginAPI(raw, (result) => {
       console.log({ result })
+      console.log(result.token)
+      handleFormSubmit(result.token)
     })
   }
 

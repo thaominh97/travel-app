@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { openModal } from '../../../store/redux/modalReducer'
 import { Link } from 'react-router-dom'
@@ -11,6 +11,7 @@ import Logo from '../../../assets/img/Logo.png'
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
+//import { isToken } from '../../../store/redux/tokenReducer'
 
 
 library.add(fas, faAngleDown);
@@ -18,6 +19,18 @@ library.add(fas, faAngleDown);
 function Navigation() {
     const dispatch = useDispatch();
     const [sidebar, setSidebar] = React.useState(false);
+    const [token, setToken] = React.useState('');
+    console.log(token)
+    useEffect(() => {
+        let _token = localStorage.getItem('token')
+
+        setToken(_token)
+    }, [])
+
+    useEffect(() => {
+        //call api
+        // setUsers()
+    }, [token])
 
     const showSidebar = () => setSidebar(!sidebar);
 
@@ -76,8 +89,9 @@ function Navigation() {
                     <Link to={item.path}>{item.title}</Link>
                 </li>)
                 ).slice(1)}
-
-                <button className="nav-item__button font-ggsans-regular" >Sign up</button>
+                {/* dung toan tu 3 ngoi  */}
+                {token ? <button className="nav-item__button font-ggsans-regular" >Log out</button>
+                : <button className="nav-item__button font-ggsans-regular" >Sign up</button>}
                 <button className="nav-item__button-icon font-ggsans-regular">
                     EN
                     <FontAwesomeIcon icon="angle-down"

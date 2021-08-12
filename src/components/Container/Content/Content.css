@@ -159,7 +159,7 @@
     .content-img {
         display: none;
     }
-    h1 {
+    .content-left > h1 {
         font-size: 46px;
         width: 90%;
     }

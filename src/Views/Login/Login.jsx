@@ -3,15 +3,11 @@ import { useDispatch } from 'react-redux'
 import { hideModal } from '../../store/redux/modalReducer'
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
 import '../Login/login.css'
-
-library.add(fas);
 
 const loginSchema = Yup.object().shape({
     password: Yup.string()
-        .min(8, "Password must be 8 characters long.")
+        .min(5, "Password must be 5 characters long.")
         .max(50, "Password must be 50 characters short!")
         .required("Required"),
     email: Yup.string().email("Invalid email").required("Required")
@@ -42,13 +38,18 @@ const Login = ({onSubmit}) => {
                     return (
                         <>
                             <Form action="#" className="login__form">
-                                <Field type="email" name="email" placeholder="E-mail" className="email" />
+                                <Field type="email" name="email" 
+                                 placeholder="E-mail" className="email" />
                                 <ErrorMessage name="email"  />
 
-                                <Field type="password" name="password" placeholder="Password" className="password" />
+                                <Field type="password" name="password"  
+                                placeholder="Password" className="password" />
                                 <ErrorMessage name="password" className="error-mes" />
 
-                                <button type="submit" disabled={isSubmitting} className="login-btn">LOG IN</button>
+                                <button type="submit" disabled={isSubmitting} 
+                                className="login-btn">
+                                    LOG IN
+                                    </button>
                             </Form>
 
                             <div className="login__help">
