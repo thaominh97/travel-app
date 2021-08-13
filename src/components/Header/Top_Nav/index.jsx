@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { openModal } from '../../../store/redux/modalReducer'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
@@ -11,22 +11,28 @@ import Logo from '../../../assets/img/Logo.png'
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-//import { isToken } from '../../../store/redux/tokenReducer'
-
+import UserInfor from '../../../Views/Login/userInfor'
+import clearToken from '../../../store/redux/tokenReducer'
 
 library.add(fas, faAngleDown);
 
 function Navigation() {
     const dispatch = useDispatch();
+    const history = useHistory();
     const [sidebar, setSidebar] = React.useState(false);
     const [token, setToken] = React.useState('');
     console.log(token)
     useEffect(() => {
         let _token = localStorage.getItem('token')
-
-        setToken(_token)
+        return _token ? setToken(_token) : '';
     }, [])
 
+    function logOut() {
+        //dispatch(clearToken())
+        localStorage.clear()
+        history.push('/')
+    }
+    
     useEffect(() => {
         //call api
         // setUsers()
@@ -65,7 +71,16 @@ function Navigation() {
             icon: <FaIcons.FaCalendarCheck />,
             cName: 'nav-text'
         },
-        {
+        token ? {
+            isUser : true,
+            title: 'user',
+            path: '/login',
+            icon: <FaIcons.FaSignInAlt />,
+            cName: 'nav-text',
+            onClick: () => {
+                dispatch(openModal())
+            }
+        } :{
             title: 'Login',
             path: '/login',
             icon: <FaIcons.FaSignInAlt />,
@@ -83,15 +98,21 @@ function Navigation() {
             <Link to="/" className="logo"><img src={Logo} alt="Logo" /></Link>
 
             <ul className="nav-list">
-                {SidebarData.map((item, index) =>
-                (<li key={index} className="nav-item font-ggsans-regular"
-                    onClick={() => item?.onClick ? item.onClick() : " "} >
-                    <Link to={item.path}>{item.title}</Link>
-                </li>)
+                {SidebarData.map((item, index) =>{
+                    if(item.isUser){
+                            // user
+                            return <UserInfor/>
+                    }else{
+                        return (<li key={index} className="nav-item font-ggsans-regular"
+                        onClick={() => item?.onClick ? item.onClick() : " "} >
+                        <Link to={item.path}>{item.title}</Link>
+                    </li>)
+                    }
+                }
                 ).slice(1)}
-                {/* dung toan tu 3 ngoi  */}
-                {token ? <button className="nav-item__button font-ggsans-regular" >Log out</button>
-                : <button className="nav-item__button font-ggsans-regular" >Sign up</button>}
+                
+                {token ? <button className="nav-item__button font-ggsans-regular" onClick={logOut} >Log out</button>
+                : <button className="nav-item__button nav-item font-ggsans-regular" ><Link to="/register">Register</Link></button>}
                 <button className="nav-item__button-icon font-ggsans-regular">
                     EN
                     <FontAwesomeIcon icon="angle-down"

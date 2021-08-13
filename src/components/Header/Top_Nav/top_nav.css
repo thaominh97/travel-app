@@ -31,12 +31,11 @@
 .nav-item {
     margin: 0 40px;
     align-items: center;
-
-    color: #212832;
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
     line-height: 22px;
+    
 }
 .nav-item a {
     text-decoration: none;
@@ -45,15 +44,11 @@
 .nav-item__button {
     border: #212832 solid 0.5px;
     border-radius: 5px;
-    font-size: 17px;
     font-weight: bold;
     align-items: center;
-
     background-color: #fff1da;
     text-align: center ;
-
-    padding: 0 10px;
-    margin: -12px 10px 0 10px;
+    box-sizing:content-box;
 }
 .nav-item__button-icon {
     border: none;

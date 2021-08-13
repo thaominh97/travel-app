@@ -2,11 +2,17 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const tokenSlice = createSlice({
   name: 'token',
-  initialState: { token:'' },
+  initialState: { token:'',
+email:'' },
   reducers: {
-    isToken: (state) => {   
-      return state.token
+    isToken: (state, {payload}) => {  
+      localStorage.setItem("token", payload) 
+      state.token = payload
     },
+    clearToken : (state) =>{
+      localStorage.clear()
+      state.token = ''
+    }
   },
 });
 

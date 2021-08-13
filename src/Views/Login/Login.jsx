@@ -9,7 +9,7 @@ const loginSchema = Yup.object().shape({
     password: Yup.string()
         .min(5, "Password must be 5 characters long.")
         .max(50, "Password must be 50 characters short!")
-        .required("Required"),
+        .required("Password is required"),
     email: Yup.string().email("Invalid email").required("Required")
 });
 
