@@ -12,7 +12,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 import UserInfor from '../../../Views/Login/userInfor'
-import clearToken from '../../../store/redux/tokenReducer'
+//import clearToken from '../../../store/redux/tokenReducer'
 
 library.add(fas, faAngleDown);
 
@@ -31,6 +31,7 @@ function Navigation() {
         //dispatch(clearToken())
         localStorage.clear()
         history.push('/')
+        window.location.reload()
     }
     
     useEffect(() => {
@@ -111,7 +112,7 @@ function Navigation() {
                 }
                 ).slice(1)}
                 
-                {token ? <button className="nav-item__button font-ggsans-regular" onClick={logOut} >Log out</button>
+                {token ? <button className="nav-item__button font-ggsans-regular" onSubmit={() => window.location.reload()} onClick={logOut} >Log out</button>
                 : <button className="nav-item__button nav-item font-ggsans-regular" ><Link to="/register">Register</Link></button>}
                 <button className="nav-item__button-icon font-ggsans-regular">
                     EN

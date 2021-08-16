@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import './Subscribe.css'
 import '../../../assets/fontawesome-free/css/all.css'
 import PlusImg from '../../../assets/img/Group3.png'
@@ -7,6 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function Subscribe() {
+
+    const [infor, setInfor] = useState({email:""})
+    console.log(infor)
+    
+    const handleSubcribe = (e) => {
+        const value = e.target.value;
+        const name = e.target.name;
+        setInfor({...infor, [name]: value })
+    }
+    
     return (
         <div className="subscribe">
             <img src={SendIcon} alt="send icon" className="sub-icon" />
@@ -17,13 +27,13 @@ function Subscribe() {
                     interesting offers about Cobham
 
                 </p>
-                <div className="button-input">
+                <form className="button-input">
                     <div>
                         <FontAwesomeIcon icon="envelope" className="envelope-icon" />
-                        <input type="text" placeholder="Your email" className="input-sub" />
+                        <input type="text" value={infor.value} name="email" onChange={handleSubcribe} placeholder="Your email" className="input-sub" />
                     </div>
                     <button type="submit" className="button-sub">Subscribe</button>
-                </div>
+                </form>
             </div>
 
             <img src={PlusImg} alt="plus-img" className="plus-img" />

@@ -5,7 +5,7 @@ import '../Bookings/Booking.css'
 const Bookings = () => {
     const [users, setUsers] = React.useState([]);
     const f = async () => {
-        const res = await fetch(`${API}${Api_config.user}`);
+        const res = await fetch(`${API}${Api_config.users}`);
         const json = await res.json();
         setUsers(json.data);
     };

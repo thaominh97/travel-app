@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 import RouterNav from './Views/RouterNav';
 import Header from './components/Header';
 import Footer from './components/Footer/Footer';
@@ -59,7 +59,6 @@ function App() {
 
   const handleFormSubmit = (token) => {
     localStorage.setItem('token', token )
-    
 }
 
   const onSubmit = (infor) => {
@@ -73,6 +72,8 @@ function App() {
       console.log({ result })
       console.log(result.token)
       handleFormSubmit(result.token)
+      window.location.reload()
+
     })
   }
 

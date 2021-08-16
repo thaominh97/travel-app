@@ -13,8 +13,9 @@ const loginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Required")
 });
 
-const Login = ({onSubmit}) => {
+const Login = ({ onSubmit }) => {
     const dispatch = useDispatch();
+
     return (
         <div className="login">
 
@@ -26,11 +27,12 @@ const Login = ({onSubmit}) => {
             <Formik className="login-data"
                 initialValues={{ email: "", password: "" }}
                 validationSchema={loginSchema}
-                onSubmit={(values, { setSubmitting }) => {
-                    // setTimeout(() => {
-                    //  console.log("Logging in", values);
-                    //     setSubmitting(false);
-                    // }, 500);
+                onSubmit={(values, { resetForm }) => {
+                    setTimeout(() => {
+                    console.log("Logging in", values);
+                    alert(`Login is complete:  ${ values.email}`)
+                    resetForm();
+                    }, 500);
                     onSubmit(values)
                 }}
             >
@@ -38,18 +40,20 @@ const Login = ({onSubmit}) => {
                     return (
                         <>
                             <Form action="#" className="login__form">
-                                <Field type="email" name="email" 
-                                 placeholder="E-mail" className="email" />
-                                <ErrorMessage name="email"  />
+                                <Field type="email" name="email"
+                                    value="eve.holt@reqres.in"
+                                    placeholder="E-mail" className="email" />
+                                <ErrorMessage name="email" />
 
-                                <Field type="password" name="password"  
-                                placeholder="Password" className="password" />
+                                <Field type="password" name="password"
+                                    value="cityslicka"
+                                    placeholder="Password" className="password" />
                                 <ErrorMessage name="password" className="error-mes" />
 
-                                <button type="submit" disabled={isSubmitting} 
-                                className="login-btn">
+                                <button type="submit" disabled={isSubmitting}
+                                    className="login-btn">
                                     LOG IN
-                                    </button>
+                                </button>
                             </Form>
 
                             <div className="login__help">
